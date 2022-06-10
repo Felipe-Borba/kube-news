@@ -31,7 +31,7 @@ jobs:
           file: ./src/Dockerfile
           context: ./src
           push: true
-          tags:
-            felipeborba/kube-news:latest
-            felipeborba/kube-news:${{github.run_number}}
+          tags: |
+            ${{secrets.DOCKERHUB_USER}}/kube-news:latest
+            ${{secrets.DOCKERHUB_USER}}/kube-news:${{github.run_number}}
             
